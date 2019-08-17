@@ -6,6 +6,7 @@
     <modules>
         <module>geekshow-ad-discovery</module>
         <module>geekshow-ad-zuul</module>
+        <module>geekshow-ad-common</module>
     </modules>
 
     <parent>
