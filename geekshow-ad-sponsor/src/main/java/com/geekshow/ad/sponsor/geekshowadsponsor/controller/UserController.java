@@ -33,10 +33,12 @@ public class UserController {
     }
 
     @GetMapping(path = "/get")
-    public CommonResponse getUserList(@Param(value = "username") String username) throws AdException {
-        log.info("ad-sponsor: getUserList -> {}", JSON.toJSONString(username));
+    public String getUserList(@Param(value = "username") String username) throws AdException {
+        log.info("ad-sponsor: getUserList -> username:{}", JSON.toJSONString(username));
         List<AdUser> allByUserName = userService.findAllByUserName(username);
-        log.info("ad-sponsor: getUserList -> {}",JSON.toJSONString(allByUserName));
-        return new CommonResponse(allByUserName);
+        log.info("ad-sponsor: getUserList -> allByUserName:{}",JSON.toJSONString(allByUserName));
+        CommonResponse commonResponse = new CommonResponse(allByUserName);
+        log.info("ad-sponsor: getUserList -> commonResponse:{}",JSON.toJSONString(commonResponse));
+        return JSON.toJSONString(new CommonResponse(allByUserName));
     }
 }
