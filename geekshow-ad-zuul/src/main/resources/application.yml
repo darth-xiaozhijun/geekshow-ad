@@ -6,19 +6,21 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://server1:7777/eureka/,http://server2:8888/eureka/,http://server3:9999/eureka/
+      defaultZone: http://localhost:7777/eureka/,http://localhost:8888/eureka/,http://localhost:9999/eureka/
   instance:
     hostname: ad-gateway-zuul
+##############################################
+# ä»¥ä¸‹ä¸ºé‡è¦ä¿¡æ¯
 zuul:
-  ignored-services: '*' # ¹ıÂËËùÓĞÇëÇó£¬³ıÁËÏÂÃæroutesÖĞÉùÃ÷¹ıµÄ·şÎñ
+  ignored-services: '*' # è¿‡æ»¤æ‰€æœ‰è¯·æ±‚ï¼Œé™¤äº†ä¸‹é¢routesä¸­å£°æ˜è¿‡çš„æœåŠ¡
   routes:
-    sponsor: #ÔÚÂ·ÓÉÖĞ×Ô¶¨Òå·şÎñÂ·ÓÉÃû³Æ
+    sponsor: #åœ¨è·¯ç”±ä¸­è‡ªå®šä¹‰æœåŠ¡è·¯ç”±åç§°
       path: /ad-sponsor/**
-      serviceId: geekshow-ad-sponsor #Î¢·şÎñname
+      serviceId: geekshow-ad-sponsor #å¾®æœåŠ¡name
       strip-prefix: false
-    search: #ÔÚÂ·ÓÉÖĞ×Ô¶¨Òå·şÎñÂ·ÓÉÃû³Æ
+    search: #åœ¨è·¯ç”±ä¸­è‡ªå®šä¹‰æœåŠ¡è·¯ç”±åç§°
       path: /ad-search/**
-      serviceId: geekshow-ad-search #Î¢·şÎñname
+      serviceId: geekshow-ad-search #å¾®æœåŠ¡name
       strip-prefix: false
   prefix: /gateway/api
-  strip-prefix: false #²»¶Ô prefix: /gateway/api ÉèÖÃµÄÂ·¾¶½øĞĞ½ØÈ¡£¬Ä¬ÈÏ×ª·¢»á½ØÈ¡µôÅäÖÃµÄÇ°×º
+  strip-prefix: false #ä¸å¯¹ prefix: /gateway/api è®¾ç½®çš„è·¯å¾„è¿›è¡Œæˆªå–ï¼Œé»˜è®¤è½¬å‘ä¼šæˆªå–æ‰é…ç½®çš„å‰ç¼€

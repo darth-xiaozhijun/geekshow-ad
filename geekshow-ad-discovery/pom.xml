@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.7.RELEASE</version>
+        <artifactId>geekshow-ad</artifactId>
+        <groupId>com.geekshow.ad</groupId>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.geekshow.ad.discovery</groupId>
@@ -24,7 +24,7 @@
             <groupId>org.springframework.cloud</groupId>
             <!--<artifactId>spring-cloud-netflix-eureka-server</artifactId>-->
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
-            <version>1.2.7.RELEASE</version>
+            <version>1.2.5.RELEASE</version>
         </dependency>
 
         <!--单元测试-->
