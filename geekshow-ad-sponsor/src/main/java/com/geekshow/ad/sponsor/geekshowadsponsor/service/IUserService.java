@@ -7,6 +7,10 @@ import com.geekshow.ad.sponsor.geekshowadsponsor.vo.UserResponseVO;
 
 import java.util.List;
 
+/**
+ * IUserService for 用户service
+ *
+ */
 public interface IUserService {
 
     /**
@@ -19,5 +23,4 @@ public interface IUserService {
     UserResponseVO createUser(UserRequestVO userRequestVO) throws AdException;
 
     List<AdUser> findAllByUserName(String userName);
-
 }

@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>geekshow-ad</artifactId>
         <groupId>com.geekshow.ad</groupId>
+        <artifactId>geekshow-ad</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
@@ -24,7 +24,7 @@
             <groupId>org.springframework.cloud</groupId>
             <!--<artifactId>spring-cloud-netflix-eureka-server</artifactId>-->
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
-            <version>1.2.5.RELEASE</version>
+            <version>1.2.7.RELEASE</version>
         </dependency>
 
         <!--单元测试-->

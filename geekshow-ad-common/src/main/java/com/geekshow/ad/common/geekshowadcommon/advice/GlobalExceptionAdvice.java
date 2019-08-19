@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * GlobalExceptionAdvice for 全局统一异常拦截
  *
- * @author <a href="mailto:magicianisaac@gmail.com">Isaac.Zhang</a>
  * @see RestControllerAdvice
  * @see ExceptionHandler
  */
@@ -35,7 +34,7 @@ public class GlobalExceptionAdvice {
      */
     @ExceptionHandler(value = AdException.class)
     public CommonResponse<String> handlerAdException(HttpServletRequest request, AdException ex) {
-        CommonResponse<String> response = new CommonResponse<>(-1, "business error");
+        CommonResponse<String> response = new CommonResponse<>(-1, "广告业务报错。");
         response.setData(ex.getMessage());
         return response;
     }

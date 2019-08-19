@@ -1,13 +1,11 @@
 package com.geekshow.ad.common.geekshowadcommon.utils;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  * CommonUtils for 工具类
  *
  */
-@Slf4j
 public class CommonUtils {
 
     /**

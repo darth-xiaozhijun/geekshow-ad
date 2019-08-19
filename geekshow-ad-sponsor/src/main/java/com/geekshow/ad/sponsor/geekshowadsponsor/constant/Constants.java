@@ -1,9 +1,5 @@
 package com.geekshow.ad.sponsor.geekshowadsponsor.constant;
 
-/**
- * Constants for TODO
- *
- */
 public class Constants {
 
     /**

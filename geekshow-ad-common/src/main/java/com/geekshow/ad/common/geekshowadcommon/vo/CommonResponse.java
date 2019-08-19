@@ -5,7 +5,7 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- *@Data是下属注解的组合注解
+ * @Data是下属注解的组合注解
  *
  * @see Getter
  * @see Setter
@@ -15,12 +15,11 @@ import java.io.Serializable;
  * @see lombok.Value
  */
 @Data
-@NoArgsConstructor//无参构造函数
+@NoArgsConstructor //无参构造函数
 @AllArgsConstructor //全参构造函数
 public class CommonResponse<T> implements Serializable {
 
     private Integer code = 0;
-
     private String message = "success";
     /**
      * 具体的数据对象信息

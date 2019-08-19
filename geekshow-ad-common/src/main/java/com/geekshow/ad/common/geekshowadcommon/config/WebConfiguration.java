@@ -27,6 +27,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void configurePathMatch(PathMatchConfigurer configurer) {
 
     }
+
     /**
      * 注册自定义的Formatter 和 Convert
      */
@@ -34,6 +35,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addFormatters(FormatterRegistry registry) {
 
     }
+
     /**
      * 添加静态资源处理器
      */
@@ -41,6 +43,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
     }
+
     /**
      * 添加自定义视图控制器
      */
@@ -48,6 +51,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
 
     }
+
     /**
      * 添加自定义方法参数处理器
      */
@@ -55,6 +59,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
 
     }
+
     /**
      * 配置消息转换器
      */

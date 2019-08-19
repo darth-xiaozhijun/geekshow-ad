@@ -5,7 +5,6 @@ import lombok.Getter;
 /**
  * CommonStatus for 通用状态枚举
  *
- * @since 2019/6/15
  */
 @Getter
 public enum CommonStatus {

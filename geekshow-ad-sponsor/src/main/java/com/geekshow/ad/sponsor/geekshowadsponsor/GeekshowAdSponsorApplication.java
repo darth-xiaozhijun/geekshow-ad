@@ -12,7 +12,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * 但是当前服务是广告提供，不需要调用别的微服务，在此只是为了在dashboard中监控
  * {@link EnableCircuitBreaker} 也是为了dashboard监控
  *
- * @since 2019/6/15
  */
 @EnableDiscoveryClient //开启服务发现Eureka Client
 @EnableCircuitBreaker //开启断路器

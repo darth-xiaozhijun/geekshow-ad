@@ -12,7 +12,6 @@ import java.util.Date;
  * AdUser for 数据库ad_user表对应的实体类
  * {@link Basic} 标示为数据库的字段信息，如果需要一个不属于数据库的字段，标注为 {@link Transient}
  *
- * @since 2019/6/15
  */
 @Data
 @AllArgsConstructor
