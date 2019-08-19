@@ -7,6 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * IgnoreResponseAdvice for 标示需要忽略拦截动作
+ *
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

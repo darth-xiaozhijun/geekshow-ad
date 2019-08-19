@@ -7,6 +7,7 @@
         <module>geekshow-ad-discovery</module>
         <module>geekshow-ad-zuul</module>
         <module>geekshow-ad-common</module>
+        <module>geekshow-ad-sponsor</module>
     </modules>
 
     <parent>
@@ -27,6 +28,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

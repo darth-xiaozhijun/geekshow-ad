@@ -5,12 +5,6 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * CommonResponse for 统一响应体
- * 因为我们不确定要返回的数据的Data类型，因此我们使用泛型T来替代
- *
- */
-
-/**
  * @Data是下属注解的组合注解
  *
  * @see Getter

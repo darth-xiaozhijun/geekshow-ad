@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
- * CommonRequestAdvice
+ * CommonResponseDataAdvice for 统一拦截处理
+ * 在响应体返回之前做一些处理；比如，修改返回值、加密等
  */
 @RestControllerAdvice
 public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
@@ -19,17 +20,17 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
     /**
      * 判断是否需要对响应进行处理
      *
-     * @return false -> 不处理，true -> 处理
+     * @return false：不需要处理，true：需要处理
      */
     @Override
     public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> converterType) {
-        //
-        //        //获取当前处理请求的controller的方法
-        //        String methodName = methodParameter.getMethod().getName().toLowerCase();
-        //        // 不拦截/不需要处理返回值 的方法
-        //        String method = "login"; //如登录
-        //        //不拦截
-        //        return !method.equals(methodName);
+//
+//        //获取当前处理请求的controller的方法
+//        String methodName = methodParameter.getMethod().getName().toLowerCase();
+//        // 不拦截/不需要处理返回值 的方法
+//        String method = "login"; //如登录
+//        //不拦截
+//        return !method.equals(methodName);
 
         // 如果类上标记了@IgnoreResponseAdvice，则不拦截
         if (methodParameter.getDeclaringClass().isAnnotationPresent(IgnoreResponseAdvice.class)) {
@@ -57,7 +58,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
                                   ServerHttpRequest request,
                                   ServerHttpResponse response) {
 
-        CommonResponse<Object> commonResponse = new CommonResponse<>();
+        CommonResponse<Object> commonResponse = new CommonResponse<>(0, "");
 
         if (null == body) {
             return commonResponse;
