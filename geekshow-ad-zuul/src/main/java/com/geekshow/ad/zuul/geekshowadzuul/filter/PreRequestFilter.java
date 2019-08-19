@@ -7,13 +7,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 
+/**
+ * PreRequestFilter for 自定义{@link ZuulFilter}，记录服务请求进入时间
+ *
+ */
 @Slf4j
 @Component
 public class PreRequestFilter extends ZuulFilter {
-
     @Override
     public String filterType() {
-
         // pre filter
         return FilterConstants.PRE_TYPE;
     }
@@ -25,12 +27,11 @@ public class PreRequestFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return false;
+        return true;
     }
 
     @Override
     public Object run() throws ZuulException {
-
         //获取当前请求的请求上下文
         RequestContext requestContext = RequestContext.getCurrentContext();
         //记录请求进入时间

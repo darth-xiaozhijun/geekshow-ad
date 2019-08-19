@@ -9,6 +9,10 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * AccessLogFilter for 记录服务请求结束时间，配合{@link PreRequestFilter}计算整个调用请求链路消耗时间
+ *
+ */
 @Slf4j
 @Component
 public class AccessLogFilter extends ZuulFilter {
@@ -32,8 +36,8 @@ public class AccessLogFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest request = requestContext.getRequest();
-        log.info("Request \"{}\" spent : {} seconds.", request.getRequestURI(),
-                (System.currentTimeMillis() - Long.valueOf(requestContext.get("api_request_time").toString())) / 1000);
+        log.info("Request \"{}\" spent : {} ms.", request.getRequestURI(),
+                (System.currentTimeMillis() - Long.valueOf(requestContext.get("api_request_time").toString())));
         return null;
     }
 }
