@@ -42,18 +42,4 @@ public class SearchResponse {
         private List<String> clickMonitorUrl = Arrays.asList("www.life-runner.com", "www.babydy.cn");
     }
 
-    /**
-     * 我们的检索服务针对的是内存中的索引检索，那么我们就需要一个转换方法
-     */
-    public static Creative convert(CreativeIndexObject object) {
-
-        return Creative.builder()
-                .adId(object.getAdId())
-                .adUrl(object.getAdUrl())
-                .width(object.getWidth())
-                .height(object.getHeight())
-                .type(object.getType())
-                .materialType(object.getMaterialType())
-                .build();
-    }
 }
